@@ -42,7 +42,8 @@ if(computerMove == 'nożyce' && playerMove == 'kamień') {
 if(computerMove == playerMove {
     printMessage('Remis!')
 }
-if(computerMove == 'kamień'+ 'papier'+'nożyce' && playerMove == 'nieznany ruch'){
+if(computerMove == 'kamień' + 'papier' + 'nożyce' && playerMove == 'nieznany ruch'){
+    printMessage('Nikt nie wygral')
 }
 
 
