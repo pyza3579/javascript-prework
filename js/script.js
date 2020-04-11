@@ -53,10 +53,6 @@ function playGame(argPlayerInput) {
 
     printMessage('Mój ruch to: ' + argComputerMove);
 
-    /*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-
-    console.log('Gracz wpisał: ' + playerInput);*/
-
     let argPlayerMove = getMoveName(argPlayerInput);
 
     printMessage('Twój ruch to: ' + argPlayerMove);
