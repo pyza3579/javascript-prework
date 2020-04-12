@@ -1,6 +1,9 @@
-function playGame(argPlayerInput) {
+{
+const playGame = function(argPlayerInput) {
+//function playGame(argPlayerInput) {
     clearMessages();
-    function getMoveName(argMoveId) {
+    const getMoveName = function(argMoveId){
+    //function getMoveName(argMoveId) {
         if(argMoveId === 1) {
         return 'kamień';
         } 
@@ -14,8 +17,8 @@ function playGame(argPlayerInput) {
         return 'nieznany ruch';
         }
     }
-
-    function displayResult(argComputerMove,argPlayerMove) {
+    const displayResult = function(argComputerMove,argPlayerMove) {
+    //function displayResult(argComputerMove,argPlayerMove) {
         console.log('moves:', argComputerMove, argPlayerMove)
         if(argComputerMove == 'kamień' && argPlayerMove == 'papier') {
         printMessage('Ty wygrywasz!');
@@ -40,26 +43,27 @@ function playGame(argPlayerInput) {
         }
     }
 
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log('Wylosowana liczba to: ' + randomNumber);
 
-    let argComputerMove = getMoveName(randomNumber); 
+    const argComputerMove = getMoveName(randomNumber); 
 
     printMessage('Mój ruch to: ' + argComputerMove);
 
-    let argPlayerMove = getMoveName(argPlayerInput);
+    const argPlayerMove = getMoveName(argPlayerInput);
 
     printMessage('Twój ruch to: ' + argPlayerMove);
-    displayResult(argComputerMove, argPlayerMove);
+    displayResult(argComputerMove, argPlayerMove);    
 }
 
 
-document.getElementById('play-rock').addEventListener('click', function(){
+document.getElementById('play-rock').addEventListener('click', function() {
   playGame(1);
 });
-document.getElementById('play-paper').addEventListener('click', function(){
+document.getElementById('play-paper').addEventListener('click', function() {
   playGame(2);
 });
-document.getElementById('play-scissors').addEventListener('click', function(){
+document.getElementById('play-scissors').addEventListener('click', function() {
   playGame(3);
 });
+}
