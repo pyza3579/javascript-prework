@@ -1,11 +1,5 @@
 function playGame(argPlayerInput) {
     clearMessages();
-    if(argPlayerInput === 3) {
-    }
-    if(argPlayerInput === 2) {
-    }
-    if(argPlayerInput === 1) {
-    }
     function getMoveName(argMoveId) {
         if(argMoveId === 1) {
         return 'kamień';
