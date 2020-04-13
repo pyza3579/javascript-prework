@@ -1,5 +1,5 @@
 {    
-const getMoveName = function(argMoveId) {
+  const getMoveName = function(argMoveId) {
     if(argMoveId === 1) {
     return 'kamień';
     } 
@@ -9,11 +9,11 @@ const getMoveName = function(argMoveId) {
     if(argMoveId === 3) {
     return 'nożyce';
     } else {
-    printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-    return 'nieznany ruch';
-    }
-}    
-const displayResult = function(argComputerMove,argPlayerMove) {
+      printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+      return 'nieznany ruch';
+      }
+  }    
+  const displayResult = function(argComputerMove,argPlayerMove) {
     console.log('moves:', argComputerMove, argPlayerMove)
     if(argComputerMove == 'kamień' && argPlayerMove == 'papier') {
     printMessage('Ty wygrywasz!');
@@ -36,8 +36,8 @@ const displayResult = function(argComputerMove,argPlayerMove) {
     if(argComputerMove == argPlayerMove) {
     printMessage('Remis!')
     }
-}
-const playGame = function(argPlayerInput) {
+  }
+  const playGame = function(argPlayerInput) {
     clearMessages();
 
     const randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -51,16 +51,16 @@ const playGame = function(argPlayerInput) {
 
     printMessage('Twój ruch to: ' + argPlayerMove);
     displayResult(argComputerMove, argPlayerMove);    
-}
+  }
 
 
-document.getElementById('play-rock').addEventListener('click', function() {
-  playGame(1);
-});
-document.getElementById('play-paper').addEventListener('click', function() {
-  playGame(2);
-});
-document.getElementById('play-scissors').addEventListener('click', function() {
-  playGame(3);
-});
+  document.getElementById('play-rock').addEventListener('click', function() {
+    playGame(1);
+  });
+  document.getElementById('play-paper').addEventListener('click', function() {
+    playGame(2);
+  });
+  document.getElementById('play-scissors').addEventListener('click', function() {
+    playGame(3);
+  });
 }
